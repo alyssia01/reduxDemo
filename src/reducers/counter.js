@@ -1,9 +1,9 @@
 const counter = (state = 0, action) => {
   switch (action.type) {
     case "Increment":
-      return state + 1;
+      return state + action.num;
     case "Decrement":
-      return state - 1;
+      return state - action.num;
     default:
       return state;
   }

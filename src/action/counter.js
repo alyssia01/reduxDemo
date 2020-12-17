@@ -1,11 +1,13 @@
-export function increment() {
+export function increment(num) {
   return {
-    type: "Increment"
+    type: "Increment",
+    num
   };
 }
 
-export function decrement() {
+export function decrement(num) {
   return {
-    type: "Decrement"
+    type: "Decrement",
+    num
   };
 }

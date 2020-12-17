@@ -5,8 +5,8 @@ import * as counterActions from "./action/counter";
 import { bindActionCreators } from "redux";
 
 class App extends Component {
-  inc() {
-    this.props.counterActions.increment();
+  inc(num) {
+    this.props.counterActions.increment(num);
   }
 
   render() {
@@ -15,10 +15,10 @@ class App extends Component {
       <div className="App">
         <h1>计数器：{this.props.counter}</h1>
         <h2>
-          <button onClick={this.inc.bind(this)}>增加</button>
+          <button onClick={this.inc.bind(this, 10)}>增加</button>
           <button
             onClick={() => {
-              this.props.counterActions.decrement();
+              this.props.counterActions.decrement(5);
             }}
           >
             减少
