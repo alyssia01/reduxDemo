@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import * as counterActions from "./action/counter";
 import { bindActionCreators } from "redux";
 
-class App extends React.Component {
+class App extends Component {
   inc() {
     this.props.counterActions.increment();
   }
